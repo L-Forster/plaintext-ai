@@ -1,0 +1,90 @@
+# --- Dependencies ---
+# Ignore dependency directories (regenerated via npm/yarn/pnpm install)
+node_modules/
+.pnpm-store/
+.venv/       
+
+# --- Build Output & Cache ---
+# Ignore compiled/transpiled/bundled code and caches
+dist/
+build/
+out/
+.next/       # Next.js build output
+.vercel/     # Vercel deployment output/cache
+.astro/      # Astro build output/cache
+.output/     # Nuxt 3 build output
+storybook-static/ # Storybook build output
+coverage/    # Test coverage reports
+.nyc_output/ # NYC (Istanbul) coverage reports
+
+# Ignore build output from server/public (Adjust if it contains source files!)
+# If 'server/public' contains source assets you *want* in Git, remove this line.
+server/public/
+
+# Vite cache
+.vite/
+
+# --- Logs ---
+# Ignore log files
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# --- Environment Variables ---
+# Ignore environment variables files. DO NOT COMMIT SECRETS!
+# Commit an example file instead (e.g., .env.example)
+.env
+.env.*
+!.env.example
+!.env.template
+!.env.development.example
+!.env.production.example
+# Add any other .env patterns you might use
+
+# --- Operating System Files ---
+# Ignore macOS metadata files
+.DS_Store
+# Ignore Windows thumbnail cache files
+Thumbs.db
+# Ignore Windows desktop configuration files
+desktop.ini
+
+# --- IDE/Editor Directories ---
+# Ignore Visual Studio Code configuration
+.vscode/
+# Ignore JetBrains IDEs configuration (WebStorm, IntelliJ IDEA, etc.)
+.idea/
+# Ignore Sublime Text project files
+*.sublime-project
+*.sublime-workspace
+# Ignore Vim swap files
+*.swp
+*.swo
+
+# --- Temporary Files & Backups ---
+# Ignore common temporary/backup files
+*~
+*.bak
+# Ignore specific config backups (from your example)
+# Consider if more specific patterns like *.bak are sufficient
+vite.config.ts.*
+
+# --- Archives ---
+# Ignore compressed archive files (often build artifacts or backups)
+*.tar.gz
+*.zip
+*.rar
+*.7z
+
+# --- Other Common Ignores ---
+# Ignore generated TypeScript declaration maps
+*.tsbuildinfo
+
+# --- Add any project-specific ignores below ---
+# e.g., temp data folders, generated assets not part of the source
+# my-temp-data/
+# generated-images/

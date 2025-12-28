@@ -1,0 +1,126 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@layer base {
+  html,
+  body,
+  #root { /* Assuming your app mounts to a div with id 'root' in index.html */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    @apply font-sans antialiased bg-theme-background text-theme-foreground;
+    min-height: 100%; /* Ensure body also tries to fill height */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+
+  :root {
+    /* Light Mode - Default Theme Colors (Inspired by modern dark themes, adapted for light) */
+    --theme-background: 0 0% 100%; /* White */
+    --theme-foreground: 224 71.4% 4.1%; /* Dark Gray */
+    --theme-muted: 210 40% 96.1%; /* Light Gray */
+    --theme-muted-foreground: 215.4 16.3% 46.9%; /* Medium Gray */
+    --theme-popover: 0 0% 100%;
+    --theme-popover-foreground: 224 71.4% 4.1%;
+    --theme-card: 0 0% 100%;
+    --theme-card-foreground: 224 71.4% 4.1%;
+    --theme-border: 214.3 31.8% 91.4%;
+    --theme-input: 214.3 31.8% 91.4%;
+    --theme-primary: 210 100% 50%; /* Royal Blue */
+    --theme-primary-foreground: 0 0% 100%; /* White text on primary */
+    --theme-destructive: 0 84.2% 60.2%;
+    --theme-destructive-foreground: 0 0% 100%;
+    --theme-ring: 210 100% 50%; /* Match primary */
+
+    /* Shadcn UI Base Variables (Light) */
+    --background: 0 0% 100%; 
+    --foreground: 224 71.4% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 210 100% 50%; /* Royal Blue */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 170 50% 80%; /* Soft, muted teal - more subtle than green */
+    --secondary-foreground: 170 50% 30%; /* Darker teal text for better contrast */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 262 83% 58%; /* Vibrant Purple */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 210 100% 50%; /* Match primary */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark Mode - Theme Colors (Inspired by Perplexity) */
+    --theme-background: 220 20% 7%; /* Very Dark Gray/Almost Black */
+    --theme-foreground: 210 20% 90%; /* Light Gray/Off-White */
+    --theme-muted: 220 50% 10%; /* Darker Muted Gray */
+    --theme-muted-foreground: 210 10% 80%; /* Lighter Muted Gray for Dark */
+    --theme-popover: 220 20% 5%;
+    --theme-popover-foreground: 210 20% 90%;
+    --theme-card: 220 20% 10%; /* Slightly lighter than background */
+    --theme-card-foreground: 210 20% 90%;
+    --theme-border: 220 15% 25%; /* Dark border */
+    --theme-input: 220 15% 25%;
+    --theme-primary: 210 100% 60%; /* Brighter Royal Blue for dark mode */
+    --theme-primary-foreground: 0 0% 100%; /* White text on primary */
+    --theme-destructive: 0 70% 50%;
+    --theme-destructive-foreground: 0 0% 100%;
+    --theme-ring: 210 100% 60%; /* Match primary */
+
+    /* Shadcn UI Base Variables (Dark) */
+    --background: 220 20% 7%;
+    --foreground: 210 20% 90%;
+    --card: 220 20% 10%;
+    --card-foreground: 210 20% 90%;
+    --popover: 220 20% 5%;
+    --popover-foreground: 210 20% 90%;
+    --primary: 210 100% 60%; /* Brighter Royal Blue for dark mode */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 170 40% 60%; /* Soft teal for dark mode */
+    --secondary-foreground: 170 40% 20%; /* Darker teal text for contrast */
+    --muted: 220 15% 25%;
+    --muted-foreground: 210 15% 65%;
+    --accent: 262 83% 68%; /* Brighter Purple for dark mode */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 15% 25%;
+    --input: 220 15% 25%;
+    --ring: 210 100% 60%; /* Match primary */
+  }
+
+  * {
+    @apply border-theme-border;
+  }
+}
+
+@layer utilities {
+  .animate-hero-gradient {
+    animation: hero-gradient 15s ease infinite;
+    background: linear-gradient(-45deg, hsl(var(--primary)), hsl(var(--accent)), hsl(var(--secondary)), hsl(var(--primary)));
+    background-size: 400% 400%;
+  }
+}
+
+@keyframes hero-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
