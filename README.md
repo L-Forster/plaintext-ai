@@ -1,4 +1,4 @@
-# PlaintextAI
+# Plaintext-AI
 
 Open-source AI research assistant for exploring academic papers, generating literature reviews, and extracting insights.
 
